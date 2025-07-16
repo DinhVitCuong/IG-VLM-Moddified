@@ -18,14 +18,7 @@ from model_processor.llava2_model_processor import Llava2Processor
 from vision_processor.fps_gridview_processor import FpsDataProcessor
 from vision_processor.fps_extractor import FpsExtractor
 from .record import *
-from enum import Enum
 
-class SaveOption(Enum):
-    BYTES = "bytes"
-    FILE = "file"
-    BASE64 = "base64"
-    NUMPY = "numpy"
-    IMAGE = "image"
 
 class LlavaPipeline:
     def __init__(
@@ -94,7 +87,7 @@ class LlavaPipeline:
         self.calculate_max_row = calculate_max_row
 
         self.fps_data_processor = FpsDataProcessor(
-            save_option=SaveOption.IMAGE,
+            save_option="image",
             calculate_max_row=self.calculate_max_row,
             frame_fixed_number=self.frame_fixed_number,
         )

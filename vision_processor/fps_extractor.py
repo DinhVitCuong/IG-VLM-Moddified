@@ -10,12 +10,6 @@ from pipeline_processor.record import *
 from .gridview_generator import *
 from enum import Enum
 
-class SaveOption(Enum):
-    BYTES = "bytes"
-    FILE = "file"
-    BASE64 = "base64"
-    NUMPY = "numpy"
-    IMAGE = "image"
 
 class FpsExtractor(BaseFrameExtractor):
     def __init__(self, video_path):
@@ -90,7 +84,7 @@ def main():
     tmp = FpsExtractor(video_path)
     print(tmp.video_path)
     tmp.save_data_based_on_option(
-        SaveOption.FILE,
+        "file",
         filename="/workspace/IG-VLM/example/extraction_sample/L01_V001_480p_sub1",
         frame_fixed_number=6,
     )

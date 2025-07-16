@@ -35,17 +35,14 @@ class FpsDataProcessor:
         grid_view_creator = GridViewCreator(self.calculate_max_row)
 
         try:
-            print("START PROCESS")
             rlt_fps_extractor = fps_extractor.save_data_based_on_option(
                 "numpy",
                 frame_fixed_number=self.frame_fixed_number,
                 ts=ts,
             )
-            print("HAHA")
             rlt_grid_view_creator = grid_view_creator.post_process_based_on_options(
                 self.save_option, rlt_fps_extractor
             )
-            print("END PROCESS")
         except Exception as e:
             print(f"Exception: {e} on {video_path}")
             return -1
@@ -55,13 +52,12 @@ class FpsDataProcessor:
 def main():
     video_name = "L01_V001_480p_sub1.mp4"
     video_path = os.path.join("/workspace/data/Sub_video/L01", video_name)
-    print(f"Video path: {video_path}")
     fps_data_processor = FpsDataProcessor(
-        save_option=SaveOption.IMAGE,
+        save_option="image",
         frame_fixed_number=6,
     )
-    print(vars(fps_data_processor))
-    print(f"Video path: {video_path}")
+    # print(vars(fps_data_processor))
+    # print(f"Video path: {video_path}")
     rlt = fps_data_processor.process(video_path)
     if rlt != -1:
         rlt.save(f"./example/imagegrid_sample/{video_name.split('.')[0]}.jpg")

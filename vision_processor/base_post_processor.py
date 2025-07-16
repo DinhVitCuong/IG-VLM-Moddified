@@ -29,9 +29,9 @@ class BasePostProcessor(ABC):
     def post_process_based_on_options(self, option, *args, **kwargs):
         self.option = option
         data = self._post_processo_on_option(*args, **kwargs)
-        if option == SaveOption.BASE64:
+        if option == "base64":
             return self._save_data_to_base64(data, quality=self.quality)
-        elif option == SaveOption.IMAGE:
+        elif option == "image":
             return Image.fromarray(data)
         else:
             raise ValueError("Invalid option: {}".format(option))

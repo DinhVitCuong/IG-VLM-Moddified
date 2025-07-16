@@ -10,12 +10,6 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from .decorator_processor import *
 from .video_validation import VideoValidator
 
-class SaveOption(Enum):
-    BYTES = "bytes"
-    FILE = "file"
-    BASE64 = "base64"
-    NUMPY = "numpy"
-    IMAGE = "image"
 
 
 class BaseFrameExtractor(ABC):
