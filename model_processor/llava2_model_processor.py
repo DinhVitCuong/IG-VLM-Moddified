@@ -32,8 +32,8 @@ from io import BytesIO
 import torch
 import torch.nn.functional as F
 from PIL import Image
-# from transformers import AutoProcessor, LlavaForConditionalGeneration
-from transformers import AutoProcessor, LlavaForConditionalGeneration
+from transformers import AutoProcessor, LlavaForConditionalGeneration, BitsAndBytesConfig, LlavaNextVideoForConditionalGeneration, LlavaNextVideoProcessor
+
 
 class Llava157BProcessor:
     def __init__(self, model_name, local_save_path=""):
@@ -51,6 +51,68 @@ class Llava157BProcessor:
     def load_model(self):
         self.processor = AutoProcessor.from_pretrained(self.model_name, use_fast=False)  # Changed to use_fast=False to avoid do_pad
         self.model = LlavaForConditionalGeneration.from_pretrained(
+            self.model_name,
+            device_map="cuda",
+            torch_dtype=torch.float16,
+            low_cpu_mem_usage=True
+        )
+
+    def inference(self, *args, **kwargs):
+        self._extract_arguments(**kwargs)
+        # print("[DEBUG] kwargs:", kwargs)
+        # print("[DEBUG] START INFERENCE")
+        # print(f"Type of raw_image: {type(self.raw_image)}")
+        # print(f"User prompt: {self.user_prompt}")
+        # self.raw_image = Image.open("/workspace/IG-VLM/example/imagegrid_sample/L01_V001_480p_sub1.jpg")
+        inputs = self.processor(
+            images=self.raw_image,
+            text=self.user_prompt,
+            return_tensors="pt",
+            padding=False
+        ).to(self.model.device, dtype=torch.float16)
+        # print("[DEBUG] INPUT PROCESSED")
+        # print(f"Processor inputs: {inputs}")
+        with torch.inference_mode():
+            output_ids = self.model.generate(
+                **inputs,
+                do_sample=self.do_sample,
+                temperature=self.temperature,
+                max_new_tokens=self.max_new_tokens,
+                use_cache=True,
+            )
+        # print("[DEBUG] OUTPUT PROCESSED")
+        self.result_rext = self.processor.batch_decode(
+            output_ids, skip_special_tokens=True
+        )[0].strip()
+
+    def extract_answers(self):
+        return self.result_rext.split("ASSISTANT:")[-1]
+
+    def _extract_arguments(self, **kwargs):
+        self.user_prompt = kwargs["user_prompt"]
+        self.raw_image = kwargs["raw_image"]
+        self.max_new_tokens = kwargs.get("max_new_tokens", 300)
+        self.do_sample = kwargs.get("do_sample", False)
+        self.temperature = kwargs.get("temperature", 1)
+
+
+
+
+class LlavaNeXTVideo7BProcessor:
+    def __init__(self, model_name, local_save_path=""):
+        self.model_name = model_name
+        self.local_save_path = local_save_path
+        self.processor = None
+        self.model = None
+        self.raw_image = None
+        self.user_prompt = None
+        self.max_new_tokens = None
+        self.do_sample = None
+        self.temperature = None
+        self.result_rext = None
+    def load_model(self):
+        self.processor = LlavaNextVideoProcessor.from_pretrained(self.model_name, use_fast=)
+        self.model = LlavaNextVideoForConditionalGeneration.from_pretrained(
             self.model_name,
             device_map="cuda",
             torch_dtype=torch.float16,

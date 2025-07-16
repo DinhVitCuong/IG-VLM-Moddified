@@ -11,7 +11,7 @@ import os
 import time
 from tqdm import tqdm
 
-from model_processor.llava2_model_processor import Llava157BProcessor
+from model_processor.llava2_model_processor import Llava157BProcessor, LlavaNeXTVideo7BProcessor
 from vision_processor.fps_gridview_processor import FpsDataProcessor
 
 class Llava15_7B_Pipeline:
