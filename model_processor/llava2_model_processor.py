@@ -93,12 +93,13 @@ class Llava2Processor(BaseModelInference):
     def inference(self, *args, **kwargs):
         self._extract_arguments(**kwargs)
         # Prepare images
-        image_sizes = [self.raw_image.size]
+        print("[DEBUG] START INFERENCE")
         inputs = self.processor(
             images=self.raw_image,
             text=self.user_prompt,  # Keep prompt unchanged
             return_tensors="pt"
         ).to(self.model.device, dtype=torch.float16)
+        print("[DEBUG] INPUT PROCESSED")
 
         # Generate output
         with torch.inference_mode():
@@ -111,6 +112,7 @@ class Llava2Processor(BaseModelInference):
                 max_new_tokens=self.max_new_tokens,
                 use_cache=True,
             )
+        print("[DEBUG] OUTPUT PROCESSED")
         # Decode and return outputs
         self.result_rext = self.tokenizer.batch_decode(
             output_ids, skip_special_tokens=True

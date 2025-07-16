@@ -120,6 +120,7 @@ class LlavaPipeline:
             if not os.path.exists(self._make_file_path(question_id)):
                 try:
                     image_data = self.fps_data_processor.process(video_path, ts)
+                    print("[DEBUG]: IMAGE PROCESSED")
                     if image_data == -1:
                         print(f"Failed to process video: {video_path}")
                         self.error_video_name.append(video_path)
@@ -128,7 +129,9 @@ class LlavaPipeline:
                         user_prompt=self.func_user_prompt(self.user_prompt, row),
                         raw_image=image_data,
                     )
+                    print("[DEBUG]: ANSWER PROCESSED")
                     extracted_answer = self.model.extract_answers()
+                    print("[DEBUG]: ANSWER EXTRACTED")
                     self.write_result_file(question_id, extracted_answer)
                 except Exception as e:
                     print(f"Error processing {video_path}: {e}")
