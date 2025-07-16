@@ -1,0 +1,23 @@
+# Text generation performance
+ python eval_llava_textgeneration_openended.py \
+ --path_qa_pair_csv ./data/text_generation_benchmark/Generic_QA.csv \
+ --path_video /workspace/IG-VLM/example/%s.mp4 \
+ --path_result ./result_textgeneration/ \
+ --api_key {api_key} \
+ --llm_size 7b
+
+ python run_llava_textgeneration_openended.py \
+  --path_qa_pair_csv ./data/text_generation_qa/TEST.csv \
+  --path_video /workspace/data/Sub_video/L01/L01_V001_480p_sub1.mp4 \
+  --video_mode single \
+  --path_result ./result_textgeneration/ \
+  --llm_size 7b \
+  --api_key your_api_key
+
+  python run_llava_textgeneration_openended.py \
+  --path_qa_pair_csv /path/to/qa.csv \
+  --path_video /example/videos \
+  --video_mode folder \
+  --path_result /example/results \
+  --llm_size 7b \
+  --api_key your_api_key
