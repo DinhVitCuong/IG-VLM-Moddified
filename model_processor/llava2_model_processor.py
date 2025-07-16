@@ -31,90 +31,58 @@ import re
 from io import BytesIO
 import torch
 import torch.nn.functional as F
+from PIL import Image
 # from transformers import AutoProcessor, LlavaForConditionalGeneration
-from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
+from transformers import AutoProcessor, LlavaForConditionalGeneration
 
-class Llava2Processor(BaseModelInference):
+class Llava2Processor:
     def __init__(self, model_name, local_save_path=""):
-        super().__init__(model_name, local_save_path)
+        self.model_name = model_name
+        self.local_save_path = local_save_path
+        self.processor = None
+        self.model = None
+        self.raw_image = None
+        self.user_prompt = None
+        self.max_new_tokens = None
+        self.do_sample = None
+        self.temperature = None
+        self.result_rext = None
 
-    # def load_model(self):
-    #     model_name = get_model_name_from_path(self.model_name)
-    #     (
-    #         self.tokenizer,
-    #         self.model,
-    #         self.image_processor,
-    #         self.context_len,
-    #     ) = load_pretrained_model(
-    #         self.model_name,
-    #         None,
-    #         model_name,
-    #         device=torch.cuda.current_device(),
-    #         device_map="cuda",
-    #     )
     def load_model(self):
-        self.processor = LlavaNextProcessor.from_pretrained(self.model_name,use_fast=True)
-        self.model = LlavaNextForConditionalGeneration.from_pretrained(
+        self.processor = AutoProcessor.from_pretrained(self.model_name, use_fast=False)  # Changed to use_fast=False to avoid do_pad
+        self.model = LlavaForConditionalGeneration.from_pretrained(
             self.model_name,
             device_map="cuda",
-            torch_dtype=torch.float16
+            torch_dtype=torch.float16,
+            low_cpu_mem_usage=True
         )
 
-    # def inference(self, *args, **kwargs):
-    #     self._extract_arguments(**kwargs)
-    #     # Prepare images
-    #     image_sizes = [self.raw_image.size]
-    #     images_tensor = process_images(
-    #         [self.raw_image], self.image_processor, self.model.config
-    #     ).to(self.model.device, dtype=torch.float16)
-
-    #     # Prepare input_ids
-    #     input_ids = (
-    #         tokenizer_image_token(
-    #             self.user_prompt, self.tokenizer, IMAGE_TOKEN_INDEX, return_tensors="pt"
-    #         )
-    #         .unsqueeze(0)
-    #         .to(self.model.device)
-    #     )
-
-    #     # Generate output
-    #     with torch.inference_mode():
-    #         output_ids = self.model.generate(
-    #             input_ids,
-    #             images=images_tensor,
-    #             image_sizes=image_sizes,
-    #             do_sample=False,
-    #             temperature=1.0,
-    #             top_p=0.9,
-    #             num_beams=1,
-    #             max_new_tokens=512,
-    #             use_cache=True,
-    #         )
     def inference(self, *args, **kwargs):
         self._extract_arguments(**kwargs)
-        # Prepare images
-        print("[DEBUG] START INFERENCE")
+        # print("[DEBUG] kwargs:", kwargs)
+        # print("[DEBUG] START INFERENCE")
+        # print(f"Type of raw_image: {type(self.raw_image)}")
+        # print(f"User prompt: {self.user_prompt}")
+        # self.raw_image = Image.open("/workspace/IG-VLM/example/imagegrid_sample/L01_V001_480p_sub1.jpg")
         inputs = self.processor(
             images=self.raw_image,
-            text=self.user_prompt,  # Keep prompt unchanged
-            return_tensors="pt"
+            text=self.user_prompt,
+            return_tensors="pt",
+            padding=False, 
+            image_sizes=[self.raw_image.size]  
         ).to(self.model.device, dtype=torch.float16)
-        print("[DEBUG] INPUT PROCESSED")
-
-        # Generate output
+        # print("[DEBUG] INPUT PROCESSED")
+        # print(f"Processor inputs: {inputs}")
         with torch.inference_mode():
             output_ids = self.model.generate(
                 **inputs,
                 do_sample=self.do_sample,
                 temperature=self.temperature,
-                top_p=kwargs.get("top_p", 0.9),
-                num_beams=kwargs.get("num_beams", 1),
                 max_new_tokens=self.max_new_tokens,
                 use_cache=True,
             )
-        print("[DEBUG] OUTPUT PROCESSED")
-        # Decode and return outputs
-        self.result_rext = self.tokenizer.batch_decode(
+        # print("[DEBUG] OUTPUT PROCESSED")
+        self.result_rext = self.processor.batch_decode(
             output_ids, skip_special_tokens=True
         )[0].strip()
 

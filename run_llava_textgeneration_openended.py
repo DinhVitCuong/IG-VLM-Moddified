@@ -7,13 +7,11 @@
 
 import sys
 import os
-import time
-from io import BytesIO
-import argparse
-import re
 import uuid
 import glob
 import pandas as pd
+import re
+import argparse
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
@@ -22,11 +20,7 @@ from pipeline_processor.llava_pipeline import *
 from evaluation.gpt3_evaluation_utils import *
 from enum import Enum
 
-class SaveOption(Enum):
-    BASE64 = "base64"
-    IMAGE = "image"
-    FILE = "file"
-    
+
 def infer_and_eval_model(args):
     path_qa = args.path_qa_pair_csv
     path_video = args.path_video
@@ -55,61 +49,25 @@ def infer_and_eval_model(args):
 
     print("loading [%s]" % (model_name))
 
-    # Process each video
-    all_df_merged = []
-    for video_path in video_paths:
-        print(f"Processing video: {video_path}")
-        llavaPipeline = LlavaPipeline(
-            model_name,
-            path_qa,
-            video_path,  # Pass single video path
-            dir=path_result_dir,
-            video_mode=video_mode,
-        )
-        llavaPipeline.set_component(
-            user_prompt,
-            frame_fixed_number=frame_fixed_number,
-        )
-        df_merged, path_df_merged = llavaPipeline.do_pipeline()
-        all_df_merged.append(df_merged)
-        print(f"llava prediction result for {video_path}: {path_df_merged}")
+    # Initialize LlavaPipeline once
+    llavaPipeline = LlavaPipeline(
+        model_name,
+        path_qa,
+        path_video,  
+        dir=path_result_dir,
+        video_mode=video_mode,
+    )
+    llavaPipeline.set_component(
+        user_prompt,
+        frame_fixed_number=frame_fixed_number,
+    )
 
-    # Combine results if processing multiple videos
-    if len(all_df_merged) > 1:
-        df_merged = pd.concat(all_df_merged, ignore_index=True)
-        path_df_merged = os.path.join(path_result_dir, f"combined_result_{uuid.uuid4()}.csv")
-        df_merged.to_csv(path_df_merged)
-    elif all_df_merged:
-        df_merged = all_df_merged[0]
-        path_df_merged = os.path.join(path_result_dir, f"result_{uuid.uuid4()}.csv")
-        df_merged.to_csv(path_df_merged)
+    # Process all videos in one pipeline run
+    df_merged, path_df_merged = llavaPipeline.do_pipeline()
+    print(f"llava prediction result: {path_df_merged}")
 
-    print("llava prediction result: " + path_df_merged)
-    # print("start gpt3-evaluation")
-
-    # gpt3_dir = os.path.join(path_result_dir, "results_gpt3_evaluation")
-
-    # Correctness Information Evaluation for Text Generation Performance
-    # df_qa, path_merged = eval_gpt3(
-    #     df_merged, gpt3_dir, api_key, gpt_eval_type=EvaluationType.CORRECTNESS
-    # )
-
-    """
-    Text Generation Benchmark has five evaluations. CI(Correctness Information), DO(Detailed Orientation), CU(Context Understanding), TU(Temporal Understanding), CO(Consistency) 
-    
-    In case of DO, Please use the following. 
-    # df_qa, path_merged = eval_gpt3(df_merged, gpt3_dir, api_key, gpt_eval_type=EvaluationType.DETAILED_ORIENTATION)
-    
-    In case of CU, Please use the following. 
-    # df_qa, path_merged = eval_gpt3(df_merged, gpt3_dir, api_key, gpt_eval_type=EvaluationType.CONTEXT)
-    
-    In case of TU, Please use the following. 
-    # df_qa, path_merged = eval_gpt3(df_merged, gpt3_dir, api_key, gpt_eval_type=EvaluationType.TEMPORAL)
-    
-    In case of CO, we need to evaluate llava twice on two questions. Then, Please use the following
-    # df_qa, path_merged = eval_gpt3_consistency(df_merged1, df_merged2, gpt3_dir, api_key)
-    
-    """
+    # No need to combine results, as do_pipeline handles all videos
+    return df_merged
 
 def get_llava_and_prompt(llm_size):
     if llm_size in ["7b", "13b"]:
@@ -178,4 +136,4 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    infer_and_eval_model(args)
+    df_merged = infer_and_eval_model(args)
