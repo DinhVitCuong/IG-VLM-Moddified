@@ -21,7 +21,18 @@
   --path_result /example/results \
   --llm_size 7b \
   --api_key your_api_key
+  
 python run_llava15_7b.py \
     --video_path /workspace/data/Sub_video/L01/L01_V001_480p_sub8.mp4 \
+    --path_result ./results \
+    --llm_size 7b
+
+python run_llava16_vicuna_7b.py \
+    --video_path /workspace/data/L01_V001_480p_sub8.mp4 \
+    --path_result ./results \
+    --llm_size 7b
+
+python run_llavanext_video_7b.py \
+    --video_path /workspace/data/L01_V001_480p_sub8.mp4 \
     --path_result ./results \
     --llm_size 7b

@@ -79,16 +79,22 @@ class FpsExtractor(BaseFrameExtractor):
 
 
 def main():
-    video_name = "L01_V001_480p_sub1.mp4"
-    video_path = os.path.join("/workspace/data/Sub_video/L01", video_name)
+    video_name = "L01_V001_480p_sub8.mp4"
+    video_path = os.path.join("/workspace/data", video_name)
     tmp = FpsExtractor(video_path)
     print(tmp.video_path)
     tmp.save_data_based_on_option(
         "file",
-        filename="/workspace/IG-VLM/example/extraction_sample/L01_V001_480p_sub1",
+        filename="/workspace/IG-VLM/example/extraction_sample/L01_V001_480p_sub8",
         frame_fixed_number=6,
     )
-
+    rlt_fps_extractor = tmp.save_data_based_on_option(
+        "numpy",
+        frame_fixed_number=6
+    )
+    
+    print(rlt_fps_extractor.shape)
+    print(type(rlt_fps_extractor))
 
 if __name__ == "__main__":
     main()
