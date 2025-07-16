@@ -35,7 +35,7 @@ from PIL import Image
 # from transformers import AutoProcessor, LlavaForConditionalGeneration
 from transformers import AutoProcessor, LlavaForConditionalGeneration
 
-class Llava2Processor:
+class Llava157BProcessor:
     def __init__(self, model_name, local_save_path=""):
         self.model_name = model_name
         self.local_save_path = local_save_path
@@ -68,8 +68,7 @@ class Llava2Processor:
             images=self.raw_image,
             text=self.user_prompt,
             return_tensors="pt",
-            padding=False, 
-            image_sizes=[self.raw_image.size]  
+            padding=False
         ).to(self.model.device, dtype=torch.float16)
         # print("[DEBUG] INPUT PROCESSED")
         # print(f"Processor inputs: {inputs}")

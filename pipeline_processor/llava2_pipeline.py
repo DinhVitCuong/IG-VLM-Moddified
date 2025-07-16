@@ -8,12 +8,13 @@
 import uuid
 import math
 import os
+import time
 from tqdm import tqdm
 
-from model_processor.llava2_model_processor import Llava2Processor
+from model_processor.llava2_model_processor import Llava157BProcessor
 from vision_processor.fps_gridview_processor import FpsDataProcessor
 
-class LlavaPipeline:
+class Llava15_7B_Pipeline:
     def __init__(
         self,
         model_name,
@@ -23,7 +24,7 @@ class LlavaPipeline:
         video_mode="single",
     ):
         self.model_name = model_name
-        self.path_qa = path_qa  # Not used for QA text input
+        self.path_qa = path_qa
         self.path_dir = dir
         self.path_result = dir
         self.path_video_file_format = path_video_file_format
@@ -32,8 +33,8 @@ class LlavaPipeline:
         self.load_model()
 
     def load_model(self):
-        print("[DEBUG] Initializing Llava2Processor")
-        self.model = Llava2Processor(self.model_name)
+        print("[DEBUG] Initializing Llava15_7BProcessor")
+        self.model = Llava157BProcessor(self.model_name)
         self.model.load_model()
         print("[DEBUG] Model loaded in LlavaPipeline")
 
@@ -62,7 +63,8 @@ class LlavaPipeline:
         self._make_directory(extra_dir)
 
     def do_pipeline(self, qa_text=None):
-        print("start pipeline")
+        # print("start pipeline")
+        start_time = time.time()  # Record start time
 
         question_id = str(uuid.uuid4())
         video_path = self.path_video_file_format
@@ -71,7 +73,7 @@ class LlavaPipeline:
         if not os.path.exists(video_path):
             print(f"Video not found: {video_path}")
             self.error_video_name.append(video_path)
-            return None, None
+            return None, None, None
 
         try:
             image_data = self.fps_data_processor.process(video_path, ts)
@@ -79,7 +81,7 @@ class LlavaPipeline:
             if image_data == -1:
                 print(f"Failed to process video: {video_path}")
                 self.error_video_name.append(video_path)
-                return None, None
+                return None, None, None
 
             answer = self.model.inference(
                 user_prompt=self.func_user_prompt(self.user_prompt, qa_text),
@@ -89,12 +91,15 @@ class LlavaPipeline:
             extracted_answer = self.model.extract_answers()
             # print("[DEBUG]: ANSWER EXTRACTED")
             result_file_path = self.write_result_file(question_id, extracted_answer)
-            return extracted_answer, result_file_path
+
+            end_time = time.time()  # Record end time
+            response_time = end_time - start_time  # Calculate response time in seconds
+            return extracted_answer, result_file_path, response_time
 
         except Exception as e:
             print(f"Error processing {video_path}: {e}")
             self.error_video_name.append(video_path)
-            return None, None
+            return None, None, None
 
     def write_result_file(self, question_id, answer, extension=".txt"):
         file_path = self._make_file_path(question_id, extension)

@@ -27,7 +27,6 @@ class BaseFrameExtractor(ABC):
 
     def save_data_based_on_option(self, option, filename=None, quality=95, **kwargs):
         data = self._extract_frame_on_option(**kwargs)
-        print(option)
         if option == "bytes":
             return self._save_data(data)
         elif option == "file":

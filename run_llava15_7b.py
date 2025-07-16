@@ -4,15 +4,14 @@
  SPDX-License-Identifier: BSD-3-Clause
  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
 """
-
 import os
 import argparse
 import torch
 import re
 
-from pipeline_processor.llava15_7b_pipeline import LlavaPipeline
+from pipeline_processor.llava2_pipeline import Llava15_7B_Pipeline
 
-def infer_model(video_path, qa_text, llm_size, path_result_dir):
+def infer_model(video_path, llm_size, path_result_dir):
     # Clear GPU memory to prevent CUDA out of memory
     torch.cuda.empty_cache()
     os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
@@ -25,10 +24,10 @@ def infer_model(video_path, qa_text, llm_size, path_result_dir):
     model_name, user_prompt = get_llava_and_prompt(llm_size)
     print(f"loading [{model_name}]")
 
-    # Initialize LlavaPipeline with single video mode
-    llava_pipeline = LlavaPipeline(
+    # Initialize LlavaPipeline
+    llava_pipeline = Llava15_7B_Pipeline(
         model_name=model_name,
-        path_qa=None,  # No CSV, QA text provided directly
+        path_qa=None,
         path_video_file_format=video_path,
         dir=path_result_dir,
         video_mode="single",
@@ -38,17 +37,36 @@ def infer_model(video_path, qa_text, llm_size, path_result_dir):
     llava_pipeline.set_component(
         user_prompt=user_prompt,
         frame_fixed_number=6,
-        func_user_prompt=lambda prompt, row: prompt % qa_text,  # Use QA text directly
+        func_user_prompt=lambda prompt, row: prompt % row,
     )
 
-    # Process video and get result
-    answer, result_file_path = llava_pipeline.do_pipeline(qa_text=qa_text)
-    if answer is not None:
-        print(f"Prediction result saved at: {result_file_path}")
-        return answer
-    else:
-        print("Failed to process video or generate answer")
-        return None
+    # Interactive loop for user questions
+    print("Enter your question about the video (press Ctrl+C to exit):")
+    while True:
+        try:
+            qa_text = input("Question: ").strip()
+            if not qa_text:
+                print("Please enter a valid question.")
+                continue
+
+            # Process video and get result with response time
+            answer, result_file_path, response_time = llava_pipeline.do_pipeline(qa_text=qa_text)
+            if answer is not None:
+                print(f"Answer: {answer}")
+                print(f"Response time: {response_time:.2f} seconds")
+                print(f"Prediction result saved at: {result_file_path}")
+                # Append response time to the .txt file
+                with open(result_file_path, "a") as file:
+                    file.write(f"\nResponse time: {response_time:.2f} seconds")
+            else:
+                print("Failed to process video or generate answer")
+
+        except KeyboardInterrupt:
+            print("\nExiting...")
+            break
+        except Exception as e:
+            print(f"Error processing question: {e}")
+            continue
 
 def get_llava_and_prompt(llm_size):
     if llm_size in ["7b", "13b"]:
@@ -72,12 +90,6 @@ def validate_video_path(filename):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="LLaVA v1.6 for video question answering")
     parser.add_argument(
-        "--qa_text",
-        type=str,
-        required=True,
-        help="Question to ask about the video (e.g., 'What is the first thing the woman does?')",
-    )
-    parser.add_argument(
         "--video_path",
         type=validate_video_path,
         required=True,
@@ -97,5 +109,4 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    answer = infer_model(args.video_path, args.qa_text, args.llm_size, args.path_result)
-    print(f"Answer: {answer}")
+    infer_model(args.video_path, args.llm_size, args.path_result)
