@@ -1,0 +1,3 @@
+
+Answer: In the video, there are two red cars
+Response time: 7.20 seconds

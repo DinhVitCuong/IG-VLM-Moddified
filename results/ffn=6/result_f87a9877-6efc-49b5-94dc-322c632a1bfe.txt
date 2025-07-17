@@ -1,0 +1,3 @@
+
+Answer: In the video, there are 20 people
+Response time: 4.86 seconds
