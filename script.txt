@@ -36,3 +36,13 @@ python run_llavanext_video_7b.py \
     --video_path /workspace/data/L01_V001_480p_sub8.mp4 \
     --path_result ./results \
     --llm_size 7b
+
+python run_llava_onevision_qwen2_05b.py \
+    --video_path /workspace/data/L01_V001_480p_sub8.mp4 \
+    --path_result ./results \
+    --llm_size 7b
+    
+python run_llava_onevision_qwen2_05b.py \
+    --video_path /workspace/data/Sub_video/L01/L01_V010_480p_sub35.mp4 \
+    --path_result ./results \
+    --llm_size 7b

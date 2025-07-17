@@ -4,7 +4,7 @@ import math
 from datetime import datetime
 
 # Input and output paths
-input_video = "/workspace/data/Video/L01/L01_V001_480p.mp4"
+input_video = "/workspace/data/Video/L01/L01_V010_480p.mp4"
 output_dir = "/workspace/data/Sub_video/L01/"
 
 # Ensure output directory exists
@@ -25,7 +25,7 @@ frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 # Calculate number of segments (15 seconds each)
 segment_duration = 15  # seconds
 # num_segments = math.ceil(duration / segment_duration)
-num_segments = 10
+num_segments = 40
 frames_per_segment = int(segment_duration * fps)
 
 
