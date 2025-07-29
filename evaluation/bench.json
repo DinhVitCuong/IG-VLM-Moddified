@@ -1,0 +1,142 @@
+{
+  "1_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub6.mp4",
+    "question": "How many times did the tomato get cut?"
+  },
+  "2_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub6.mp4",
+    "question": "How many times did the onion get cut"
+  },
+  "3_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub10.mp4",
+    "question": "How many times did he stir the liquid dough?"
+  },
+  "4_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub9.mp4",
+    "question": "How many times did he stir the mixture?"
+  },
+  "5_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub13.mp4",
+    "question": "How many meat patties are there in total?"
+  },
+  "6_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub13.mp4",
+    "question": "How many times did he fold the meat patties"
+  },
+  "7_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub2.mp4",
+    "question": "How many bow of food at the start of video?"
+  },
+  "8_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+    "question": "How many section in the picture next to the man?"
+  },
+  "9_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub8.mp4",
+    "question": "How many box is pointed out from the map?"
+  },
+  "10_count": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub20.mp4",
+    "question": "How many picture is being shown next to the man?"
+  },
+  "1_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub7.mp4",
+    "question": "How is the meat prepared?"
+  },
+  "2_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub7.mp4",
+    "question": "How is the onion prepared?"
+  },
+  "3_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub10.mp4",
+    "question": "What did he pour into the flour?"
+  },
+  "4_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub9.mp4",
+    "question": "What did he do to the meat mixture?"
+  },
+  "5_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub2.mp4",
+    "question": "What are they doing in the video?"
+  },
+  "6_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub5.mp4",
+    "question": "Describe the scene."
+  },
+  "7_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub8.mp4",
+    "question": "How the old man's feeling?"
+  },
+  "8_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub10.mp4",
+    "question": "Is the kid with redshirt bitting something?"
+  },
+  "9_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub36.mp4",
+    "question": "Is there any fisherman in the picture ?"
+  },
+  "10_des": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub20.mp4",
+    "question": "Describe 3 images next to the man."
+  },
+  "1_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub8.mp4",
+    "question": "Describe the outfit of a person who is being interviewed."
+  },
+  "2_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub5.mp4",
+    "question": "Describe the outfit of a person who is being interviewed."
+  },
+  "3_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub11.mp4",
+    "question": "What is the gender of the person who is being interviewed."
+  },
+  "4_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub10.mp4",
+    "question": "Describe the outfit of a person who is on the wheelchair."
+  },
+  "5_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+    "question": "What is the man teaching?"
+  },
+  "6_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+    "question": "what region is the teacher teaching?"
+  },
+  "7_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub8.mp4",
+    "question": "Which country is being shown on the map in the image?"
+  },
+  "8_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub24.mp4",
+    "question": "Is there an image of the animal that make milk?"
+  },
+  "9_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub36.mp4",
+    "question": "What kind of demographic is being shown?"
+  },
+  "10_hypo": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub24.mp4",
+    "question": "What kind of demographic is being shown?"
+  },
+  "1_ocr": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub2.mp4",
+    "question": "What is the name of the dish?"
+  },
+  "2_ocr": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub2.mp4",
+    "question": "What are the ingredients to make the dish?"
+  },
+  "3_ocr": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+    "question": "How many province mentioned in the video?"
+  },
+  "4_ocr": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+    "question": "What is the area of the North Central region?"
+  },
+  "5_ocr": {
+    "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+    "question": "What is the population of that region?"
+  }
+}

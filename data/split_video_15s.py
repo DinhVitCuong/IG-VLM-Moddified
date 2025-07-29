@@ -4,8 +4,8 @@ import math
 from datetime import datetime
 
 # Input and output paths
-input_video = "/workspace/data/Video/L01/L01_V010_480p.mp4"
-output_dir = "/workspace/data/Sub_video/L01/"
+input_video = r"Z:\ACMMM\data\bench_raw\L25_V016.mp4"
+output_dir = r"Z:\ACMMM\data\bench"
 
 # Ensure output directory exists
 os.makedirs(output_dir, exist_ok=True)
