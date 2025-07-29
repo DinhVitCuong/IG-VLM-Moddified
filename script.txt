@@ -48,7 +48,7 @@ python run_llava_onevision_qwen2_05b.py \
     --llm_size 7b
 
 INTERACTIVE:
-python video_qa_script.py interactive --video_path /path/to/video.mp4 --path_result Z:\ACMMM\IG-VLM-Moddified\results\bench 
+python run_llava_onevision_qwen2_05b.py --video_path /path/to/video.mp4 --path_result /path/to/output --llm_size 7b
 
 BENCH:
-python video_qa_script.py auto --input_json Z:\ACMMM\IG-VLM-Moddified\evaluation\bench.json --path_result Z:\ACMMM\IG-VLM-Moddified\results\bench 
+python Z:\ACMMM\IG-VLM-Moddified\run_llava_onevision_qwen2_05b_new.py --bench_json Z:\ACMMM\IG-VLM-Moddified\evaluation\bench.json --path_result Z:\ACMMM\IG-VLM-Moddified\results\bench 

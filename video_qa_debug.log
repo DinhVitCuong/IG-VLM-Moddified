@@ -1,0 +1,177 @@
+2025-07-29 22:57:19,354 - DEBUG - Validating llm_size: 7b
+2025-07-29 22:57:19,354 - DEBUG - Parsed arguments: mode=auto
+2025-07-29 22:57:19,354 - DEBUG - Starting process_auto_mode with input_json: Z:\ACMMM\IG-VLM-Moddified\evaluation\bench.json, path_result: Z:\ACMMM\IG-VLM-Moddified\results\bench, llm_size: 7b
+2025-07-29 22:57:19,355 - DEBUG - Loaded JSON with 35 questions
+2025-07-29 22:57:19,355 - DEBUG - Added question 1_count for video Z:\ACMMM\data\bench\L26_V032_sub6.mp4
+2025-07-29 22:57:19,355 - DEBUG - Added question 2_count for video Z:\ACMMM\data\bench\L26_V032_sub6.mp4
+2025-07-29 22:57:19,356 - DEBUG - Added question 3_count for video Z:\ACMMM\data\bench\L26_V032_sub10.mp4
+2025-07-29 22:57:19,356 - DEBUG - Added question 4_count for video Z:\ACMMM\data\bench\L26_V032_sub9.mp4
+2025-07-29 22:57:19,356 - DEBUG - Added question 5_count for video Z:\ACMMM\data\bench\L26_V032_sub13.mp4
+2025-07-29 22:57:19,356 - DEBUG - Added question 6_count for video Z:\ACMMM\data\bench\L26_V032_sub13.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 7_count for video Z:\ACMMM\data\bench\L30_V084_sub2.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 8_count for video Z:\ACMMM\data\bench\L25_V016_sub7.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 9_count for video Z:\ACMMM\data\bench\L25_V016_sub8.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 10_count for video Z:\ACMMM\data\bench\L25_V016_sub20.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 1_des for video Z:\ACMMM\data\bench\L26_V032_sub7.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 2_des for video Z:\ACMMM\data\bench\L26_V032_sub7.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 3_des for video Z:\ACMMM\data\bench\L26_V032_sub10.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 4_des for video Z:\ACMMM\data\bench\L26_V032_sub9.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 5_des for video Z:\ACMMM\data\bench\L30_V084_sub2.mp4
+2025-07-29 22:57:19,357 - DEBUG - Added question 6_des for video Z:\ACMMM\data\bench\L30_V084_sub5.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 7_des for video Z:\ACMMM\data\bench\L30_V084_sub8.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 8_des for video Z:\ACMMM\data\bench\L30_V084_sub10.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 9_des for video Z:\ACMMM\data\bench\L25_V016_sub36.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 10_des for video Z:\ACMMM\data\bench\L25_V016_sub20.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 1_hypo for video Z:\ACMMM\data\bench\L30_V084_sub8.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 2_hypo for video Z:\ACMMM\data\bench\L30_V084_sub5.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 3_hypo for video Z:\ACMMM\data\bench\L30_V084_sub11.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 4_hypo for video Z:\ACMMM\data\bench\L30_V084_sub10.mp4
+2025-07-29 22:57:19,358 - DEBUG - Added question 5_hypo for video Z:\ACMMM\data\bench\L25_V016_sub7.mp4
+2025-07-29 22:57:19,359 - DEBUG - Added question 6_hypo for video Z:\ACMMM\data\bench\L25_V016_sub7.mp4
+2025-07-29 22:57:19,359 - DEBUG - Added question 7_hypo for video Z:\ACMMM\data\bench\L25_V016_sub8.mp4
+2025-07-29 22:57:19,359 - DEBUG - Added question 8_hypo for video Z:\ACMMM\data\bench\L25_V016_sub24.mp4
+2025-07-29 22:57:19,359 - DEBUG - Added question 9_hypo for video Z:\ACMMM\data\bench\L25_V016_sub36.mp4
+2025-07-29 22:57:19,359 - DEBUG - Added question 10_hypo for video Z:\ACMMM\data\bench\L25_V016_sub24.mp4
+2025-07-29 22:57:19,359 - DEBUG - Added question 1_ocr for video Z:\ACMMM\data\bench\L26_V032_sub2.mp4
+2025-07-29 22:57:19,359 - DEBUG - Added question 2_ocr for video Z:\ACMMM\data\bench\L26_V032_sub2.mp4
+2025-07-29 22:57:19,360 - DEBUG - Added question 3_ocr for video Z:\ACMMM\data\bench\L25_V016_sub7.mp4
+2025-07-29 22:57:19,360 - DEBUG - Added question 4_ocr for video Z:\ACMMM\data\bench\L25_V016_sub7.mp4
+2025-07-29 22:57:19,360 - DEBUG - Added question 5_ocr for video Z:\ACMMM\data\bench\L25_V016_sub7.mp4
+2025-07-29 22:57:19,361 - DEBUG - Processing video: Z:\ACMMM\data\bench\L26_V032_sub6.mp4 with 2 questions
+2025-07-29 22:57:19,361 - DEBUG - Created output directory: Z:\ACMMM\IG-VLM-Moddified\results\bench\L26_V032_sub6
+2025-07-29 22:57:19,362 - DEBUG - Getting model and prompt for llm_size: 7b
+2025-07-29 22:57:19,362 - DEBUG - Model: llava-hf/llava-1.5-7b-hf, Prompt: USER: <image>
+The provided image arranges keyframe...
+2025-07-29 22:57:19,362 - INFO - Loading model llava-hf/llava-1.5-7b-hf for video: Z:\ACMMM\data\bench\L26_V032_sub6.mp4
+2025-07-29 22:57:19,367 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-07-29 22:57:19,711 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:19,743 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:20,012 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:57:20,277 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:20,316 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:20,584 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.json HTTP/1.1" 307 0
+2025-07-29 22:57:20,635 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.json HTTP/1.1" 200 0
+2025-07-29 22:57:20,913 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.jinja HTTP/1.1" 307 0
+2025-07-29 22:57:20,948 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.jinja HTTP/1.1" 200 0
+2025-07-29 22:57:21,241 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0
+2025-07-29 22:57:21,521 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/preprocessor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:21,552 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/preprocessor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:21,837 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:21,866 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/tokenizer_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:22,207 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:57:23,037 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:57:23,309 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:23,342 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:23,617 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.json HTTP/1.1" 307 0
+2025-07-29 22:57:23,653 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.json HTTP/1.1" 200 0
+2025-07-29 22:57:23,923 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.jinja HTTP/1.1" 307 0
+2025-07-29 22:57:23,971 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.jinja HTTP/1.1" 200 0
+2025-07-29 22:57:24,253 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0
+2025-07-29 22:57:24,544 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-29 22:57:24,582 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/config.json HTTP/1.1" 200 0
+2025-07-29 22:57:24,844 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-29 22:57:24,876 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/config.json HTTP/1.1" 200 0
+2025-07-29 22:57:40,946 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/generation_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:41,005 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/generation_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:41,732 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-07-29 22:57:41,763 - DEBUG - LlavaPipeline initialized successfully
+2025-07-29 22:57:41,764 - DEBUG - Pipeline components set
+2025-07-29 22:57:41,764 - DEBUG - Processing question 1_count: How many times did the tomato get cut?
+2025-07-29 22:57:42,580 - ERROR - Invalid pipeline output for question 1_count: How many times did the tomato get cut?
+2025-07-29 22:57:42,580 - DEBUG - Processing question 2_count: How many times did the onion get cut
+2025-07-29 22:57:43,081 - ERROR - Invalid pipeline output for question 2_count: How many times did the onion get cut
+2025-07-29 22:57:43,082 - DEBUG - Deleting LlavaPipeline and clearing GPU memory
+2025-07-29 22:57:43,091 - DEBUG - Processing video: Z:\ACMMM\data\bench\L26_V032_sub10.mp4 with 2 questions
+2025-07-29 22:57:43,092 - DEBUG - Created output directory: Z:\ACMMM\IG-VLM-Moddified\results\bench\L26_V032_sub10
+2025-07-29 22:57:43,093 - DEBUG - Getting model and prompt for llm_size: 7b
+2025-07-29 22:57:43,093 - DEBUG - Model: llava-hf/llava-1.5-7b-hf, Prompt: USER: <image>
+The provided image arranges keyframe...
+2025-07-29 22:57:43,093 - INFO - Loading model llava-hf/llava-1.5-7b-hf for video: Z:\ACMMM\data\bench\L26_V032_sub10.mp4
+2025-07-29 22:57:43,361 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:43,394 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:44,139 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:57:44,416 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:44,453 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:44,748 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.json HTTP/1.1" 307 0
+2025-07-29 22:57:44,783 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.json HTTP/1.1" 200 0
+2025-07-29 22:57:45,070 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.jinja HTTP/1.1" 307 0
+2025-07-29 22:57:45,101 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.jinja HTTP/1.1" 200 0
+2025-07-29 22:57:45,376 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0
+2025-07-29 22:57:45,659 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/preprocessor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:45,694 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/preprocessor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:45,966 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:45,995 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/tokenizer_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:46,283 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:57:46,679 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:57:46,953 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:57:46,984 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:57:47,255 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.json HTTP/1.1" 307 0
+2025-07-29 22:57:47,283 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.json HTTP/1.1" 200 0
+2025-07-29 22:57:47,562 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.jinja HTTP/1.1" 307 0
+2025-07-29 22:57:47,593 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.jinja HTTP/1.1" 200 0
+2025-07-29 22:57:47,876 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0
+2025-07-29 22:57:48,208 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-29 22:57:48,242 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/config.json HTTP/1.1" 200 0
+2025-07-29 22:57:48,524 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-29 22:57:48,555 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/config.json HTTP/1.1" 200 0
+2025-07-29 22:58:02,511 - ERROR - Error processing video Z:\ACMMM\data\bench\L26_V032_sub10.mp4: CUDA out of memory. Tried to allocate 86.00 MiB. GPU 0 has a total capacity of 12.00 GiB of which 0 bytes is free. Of the allocated memory 18.61 GiB is allocated by PyTorch, and 11.61 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "Z:\ACMMM\IG-VLM-Moddified\run_llava_onevision_qwen2_05b_new.py", line 183, in process_auto_mode
+    llava_pipeline = Llava_Onevision_QWEN2_05BPipeline(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\ACMMM\IG-VLM-Moddified\pipeline_processor\llava2_pipeline.py", line 339, in __init__
+    self.load_model()
+  File "Z:\ACMMM\IG-VLM-Moddified\pipeline_processor\llava2_pipeline.py", line 344, in load_model
+    self.model.load_model()
+  File "Z:\ACMMM\IG-VLM-Moddified\model_processor\llava2_model_processor.py", line 250, in load_model
+    self.model = LlavaOnevisionForConditionalGeneration.from_pretrained(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\ACMMM\IG_VLM_env\Lib\site-packages\transformers\modeling_utils.py", line 315, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\ACMMM\IG_VLM_env\Lib\site-packages\transformers\modeling_utils.py", line 4998, in from_pretrained
+    ) = cls._load_pretrained_model(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\ACMMM\IG_VLM_env\Lib\site-packages\transformers\modeling_utils.py", line 5456, in _load_pretrained_model
+    _error_msgs, disk_offload_index, cpu_offload_index = load_shard_file(args)
+                                                         ^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\ACMMM\IG_VLM_env\Lib\site-packages\transformers\modeling_utils.py", line 937, in load_shard_file
+    disk_offload_index, cpu_offload_index = _load_state_dict_into_meta_model(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\ACMMM\IG_VLM_env\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\ACMMM\IG_VLM_env\Lib\site-packages\transformers\modeling_utils.py", line 849, in _load_state_dict_into_meta_model
+    _load_parameter_into_model(model, param_name, param.to(param_device))
+                                                  ^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.00 MiB. GPU 0 has a total capacity of 12.00 GiB of which 0 bytes is free. Of the allocated memory 18.61 GiB is allocated by PyTorch, and 11.61 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+2025-07-29 22:58:04,115 - DEBUG - Processing video: Z:\ACMMM\data\bench\L26_V032_sub9.mp4 with 2 questions
+2025-07-29 22:58:04,119 - DEBUG - Created output directory: Z:\ACMMM\IG-VLM-Moddified\results\bench\L26_V032_sub9
+2025-07-29 22:58:04,119 - DEBUG - Getting model and prompt for llm_size: 7b
+2025-07-29 22:58:04,119 - DEBUG - Model: llava-hf/llava-1.5-7b-hf, Prompt: USER: <image>
+The provided image arranges keyframe...
+2025-07-29 22:58:04,120 - INFO - Loading model llava-hf/llava-1.5-7b-hf for video: Z:\ACMMM\data\bench\L26_V032_sub9.mp4
+2025-07-29 22:58:04,530 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:58:04,569 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:58:04,883 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:58:05,163 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:58:05,238 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:58:05,506 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.json HTTP/1.1" 307 0
+2025-07-29 22:58:05,538 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.json HTTP/1.1" 200 0
+2025-07-29 22:58:05,814 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.jinja HTTP/1.1" 307 0
+2025-07-29 22:58:05,853 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.jinja HTTP/1.1" 200 0
+2025-07-29 22:58:06,143 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0
+2025-07-29 22:58:06,433 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/preprocessor_config.json HTTP/1.1" 307 0
+2025-07-29 22:58:06,474 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/preprocessor_config.json HTTP/1.1" 200 0
+2025-07-29 22:58:06,765 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-07-29 22:58:06,794 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/tokenizer_config.json HTTP/1.1" 200 0
+2025-07-29 22:58:07,107 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:58:07,521 - DEBUG - https://huggingface.co:443 "GET /api/models/llava-hf/llava-1.5-7b-hf/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-29 22:58:07,805 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/processor_config.json HTTP/1.1" 307 0
+2025-07-29 22:58:07,838 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/processor_config.json HTTP/1.1" 200 0
+2025-07-29 22:58:08,103 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.json HTTP/1.1" 307 0
+2025-07-29 22:58:08,134 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.json HTTP/1.1" 200 0
+2025-07-29 22:58:08,408 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/chat_template.jinja HTTP/1.1" 307 0
+2025-07-29 22:58:08,438 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/llava-hf/llava-1.5-7b-hf/b234b804b114d9e37bb655e11cbbb5f5e971b7a9/chat_template.jinja HTTP/1.1" 200 0
+2025-07-29 22:58:08,703 - DEBUG - https://huggingface.co:443 "HEAD /llava-hf/llava-1.5-7b-hf/resolve/main/audio_tokenizer_config.json HTTP/1.1" 404 0

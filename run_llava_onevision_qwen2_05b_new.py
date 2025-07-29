@@ -1,8 +1,8 @@
 """
-Copyright (c) 2024, Deep Representation Learning Research Group, Seoul National University.
-All rights reserved.
-SPDX-License-Identifier: BSD-3-Clause
-For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ Copyright (c) 2024, Deep Representation Learning Research Group, Seoul National University.
+ All rights reserved.
+ SPDX-License-Identifier: BSD-3-Clause
+ For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
 """
 import os
 import argparse
@@ -12,7 +12,7 @@ import json
 
 from pipeline_processor.llava2_pipeline import Llava_Onevision_QWEN2_05BPipeline
 
-def infer_model(video_path, llm_size, path_result_dir):
+def infer_model(video_path, llm_size, path_result_dir, question=None, ffn=6):
     # Clear GPU memory to prevent CUDA out of memory
     torch.cuda.empty_cache()
     os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
@@ -37,124 +37,55 @@ def infer_model(video_path, llm_size, path_result_dir):
     # Set pipeline components
     llava_pipeline.set_component(
         user_prompt=user_prompt,
-        frame_fixed_number=6,
+        frame_fixed_number=ffn,
         func_user_prompt=lambda prompt, row: prompt % row,
     )
 
-    # Interactive loop for user questions
-    print("Enter your question about the video (press Ctrl+C to exit):")
-    while True:
+    if question is not None:
+        # Single question mode (for bench)
         try:
-            qa_text = input("Question: ").strip()
-            if not qa_text:
-                print("Please enter a valid question.")
-                continue
-
-            # Process video and get result with response time
-            answer, result_file_path, response_time = llava_pipeline.do_pipeline(qa_text=qa_text)
+            answer, result_file_path, response_time = llava_pipeline.do_pipeline(qa_text=question)
             if answer is not None:
-                print(f"Answer: {answer}")
-                print(f"Response time: {response_time:.2f} seconds")
-                print(f"Prediction result saved at: {result_file_path}")
-                # Append response time to the .txt file
-                with open(result_file_path, "a") as file:
-                    file.write(f"\nResponse time: {response_time:.2f} seconds")
+                return answer, response_time
             else:
-                print("Failed to process video or generate answer")
-
-        except KeyboardInterrupt:
-            print("\nExiting...")
-            break
+                return None, None
         except Exception as e:
             print(f"Error processing question: {e}")
-            continue
+            return None, None
+    else:
+        # Interactive mode
+        print("Enter your question about the video (press Ctrl+C to exit):")
+        while True:
+            try:
+                qa_text = input("Question: ").strip()
+                if not qa_text:
+                    print("Please enter a valid question.")
+                    continue
 
-def process_auto_mode(input_json_path, path_result, llm_size):
-    # Clear GPU memory to prevent CUDA out of memory
-    torch.cuda.empty_cache()
-    os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-
-    # Read input JSON
-    with open(input_json_path, 'r') as f:
-        input_data = json.load(f)
-
-    output_data = {}
-    # Group questions by video_path
-    video_questions = {}
-    for question_id, data in input_data.items():
-        video_path = data.get("video_path")
-        question = data.get("question")
-        if video_path is None or question is None:
-            print(f"Missing video_path or question for {question_id}")
-            continue
-        if video_path not in video_questions:
-            video_questions[video_path] = []
-        video_questions[video_path].append((question_id, question))
-
-    # Process each unique video_path
-    for video_path, questions in video_questions.items():
-        try:
-            # Create subdirectory for this video
-            video_dir_name = os.path.splitext(os.path.basename(video_path))[0]
-            video_dir = os.path.join(path_result, video_dir_name)
-            os.makedirs(video_dir, exist_ok=True)
-
-            # Initialize pipeline
-            model_name, user_prompt = get_llava_and_prompt(llm_size)
-            print(f"Loading model for video: {video_path}")
-            llava_pipeline = Llava_Onevision_QWEN2_05BPipeline(
-                model_name=model_name,
-                path_qa=None,
-                path_video_file_format=video_path,
-                dir=video_dir,
-                video_mode="single",
-            )
-            llava_pipeline.set_component(
-                user_prompt=user_prompt,
-                frame_fixed_number=6,
-                func_user_prompt=lambda prompt, row: prompt % row,
-            )
-
-            # Process each question for this video
-            for question_id, question in questions:
-                try:
-                    answer, result_file_path, response_time = llava_pipeline.do_pipeline(qa_text=question)
-                    if answer is not None:
-                        output_data[question_id] = {
-                            "video_path": video_path,
-                            "question": question,
-                            "answer": answer,
-                            "response_time": response_time
-                        }
-                        # Append response time to the result file
-                        with open(result_file_path, "a") as file:
-                            file.write(f"\nResponse time: {response_time:.2f} seconds")
-                    else:
-                        print(f"Failed to process question {question_id} for video {video_path}")
-                except Exception as e:
-                    print(f"Error processing question {question_id} for video {video_path}: {e}")
-
-        except Exception as e:
-            print(f"Error processing video {video_path}: {e}")
-        finally:
-            # Clean up
-            if 'llava_pipeline' in locals():
-                del llava_pipeline
-            torch.cuda.empty_cache()
-
-    # Save output_data to JSON
-    output_path = os.path.join(path_result, "results.json")
-    with open(output_path, 'w') as f:
-        json.dump(output_data, f, indent=4)
-    print(f"Results saved to {output_path}")
+                answer, result_file_path, response_time = llava_pipeline.do_pipeline(qa_text=qa_text)
+                if answer is not None:
+                    print(f"Answer: {answer}")
+                    print(f"Response time: {response_time:.2f} seconds")
+                    print(f"Prediction result saved at: {result_file_path}")
+                    # Append response time to the .txt file
+                    with open(result_file_path, "a") as file:
+                        file.write(f"\nResponse time: {response_time:.2f} seconds")
+                else:
+                    print("Failed to process video or generate answer")
+            except KeyboardInterrupt:
+                print("\nExiting...")
+                break
+            except Exception as e:
+                print(f"Error processing question: {e}")
+                continue
 
 def get_llava_and_prompt(llm_size):
     if llm_size in ["7b", "13b"]:
         prompt = "USER: <image>\nThe provided image arranges keyframes from a video in a grid view. Answer concisely with overall content and context of the video, highlighting any significant events, characters, or objects that appear throughout the frames. Question: %s? \nASSISTANT:\nAnswer: In the video,"
-        model_name = f"llava-hf/llava-1.5-7b-hf"
+        model_name = f"llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
     else:
         prompt = "<|im_start|>system\nAnswer the question. <|im_end|>\n<|im_start|>user\n<image>\nThe provided image arranges keyframes from a video in a grid view. Answer concisely with overall content and context of the video, highlighting any significant events, characters, or objects that appear throughout the frames. Question: %s? <|im_end|>\n<|im_start|>assistant\nAnswer: In the video,"
-        model_name = "llava-hf/llava-v1.5-34b-hf"
+        model_name = "llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
     return model_name, prompt
 
 def validate_llm_size(type_llm_size):
@@ -169,53 +100,62 @@ def validate_video_path(filename):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="LLaVA v1.6 for video question answering")
-    subparsers = parser.add_subparsers(dest="mode", required=True)
-
-    # Interactive mode
-    interactive_parser = subparsers.add_parser("interactive")
-    interactive_parser.add_argument(
+    parser.add_argument(
         "--video_path",
         type=validate_video_path,
-        required=True,
         help="Path to the video file (e.g., /path/to/video.mp4)",
     )
-    interactive_parser.add_argument(
+    parser.add_argument(
         "--path_result",
         type=str,
         required=True,
         help="Path to output directory for results",
     )
-    interactive_parser.add_argument(
+    parser.add_argument(
         "--llm_size",
         type=validate_llm_size,
         default="7b",
         help="LLaVA model size: 7b, 13b, or 34b",
     )
-
-    # Auto mode
-    auto_parser = subparsers.add_parser("auto")
-    auto_parser.add_argument(
-        "--input_json",
+    parser.add_argument(
+        "--bench_json",
         type=str,
-        required=True,
-        help="Path to input JSON file containing questions and video paths",
-    )
-    auto_parser.add_argument(
-        "--path_result",
-        type=str,
-        required=True,
-        help="Path to output directory for results",
-    )
-    auto_parser.add_argument(
-        "--llm_size",
-        type=validate_llm_size,
-        default="7b",
-        help="LLaVA model size: 7b, 13b, or 34b",
+        help="Path to bench.json file for batch processing",
     )
 
+    parser.add_argument(
+        "--frame_number",
+        type=int,
+        help="number of frame",
+        default=6,
+    )
     args = parser.parse_args()
 
-    if args.mode == "interactive":
+    if args.bench_json:
+        # Bench mode
+        with open(args.bench_json, 'r') as f:
+            bench_data = json.load(f)
+        
+        results = []
+        for key, entry in bench_data.items():
+            video_path = entry["video_path"]
+            question = entry["question"]
+            answer, time = infer_model(video_path, args.llm_size, args.path_result, question=question, ffn = args.frame_number)
+            results.append({
+                "id": key,
+                "video_path": video_path,
+                "question": question,
+                "answer": answer if answer is not None else "Failed",
+                "time": time if time is not None else "N/A"
+            })
+        
+        # Save results
+        output_file = os.path.join(args.path_result, "bench_results.json")
+        with open(output_file, 'w') as f:
+            json.dump(results, f, indent=4)
+        print(f"Bench results saved to {output_file}")
+    elif args.video_path:
+        # Interactive mode
         infer_model(args.video_path, args.llm_size, args.path_result)
-    elif args.mode == "auto":
-        process_auto_mode(args.input_json, args.path_result, args.llm_size)
+    else:
+        parser.error("Either --video_path or --bench_json must be provided")

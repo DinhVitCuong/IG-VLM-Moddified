@@ -1,0 +1,247 @@
+[
+    {
+        "id": "1_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub6.mp4",
+        "question": "How many times did the tomato get cut?",
+        "answer": "\nAnswer: In the video, the tomato was cut",
+        "time": 6.547351360321045
+    },
+    {
+        "id": "2_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub6.mp4",
+        "question": "How many times did the onion get cut",
+        "answer": "\nAnswer: In the video, the onion was cut",
+        "time": 5.32745885848999
+    },
+    {
+        "id": "3_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub10.mp4",
+        "question": "How many times did he stir the liquid dough?",
+        "answer": "\nAnswer: In the video, the person is shown stirring the liquid dough three times",
+        "time": 5.669565200805664
+    },
+    {
+        "id": "4_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub9.mp4",
+        "question": "How many times did he stir the mixture?",
+        "answer": "\nAnswer: In the video, the person is shown stirring the mixture in the bowl",
+        "time": 5.7775726318359375
+    },
+    {
+        "id": "5_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub13.mp4",
+        "question": "How many meat patties are there in total?",
+        "answer": "\nAnswer: In the video, there are",
+        "time": 6.149071931838989
+    },
+    {
+        "id": "6_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub13.mp4",
+        "question": "How many times did he fold the meat patties",
+        "answer": "\nAnswer: In the video, the meat patties were folded once",
+        "time": 6.499497652053833
+    },
+    {
+        "id": "7_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub2.mp4",
+        "question": "How many bow of food at the start of video?",
+        "answer": "\nAnswer: In the video, there are two bowls of food",
+        "time": 6.401127099990845
+    },
+    {
+        "id": "8_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "How many section in the picture next to the man?",
+        "answer": "\nAnswer: In the video, there are two sections",
+        "time": 91.76201486587524
+    },
+    {
+        "id": "9_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub8.mp4",
+        "question": "How many box is pointed out from the map?",
+        "answer": "\nAnswer: In the video, the box is pointed out from the map",
+        "time": 8.754091739654541
+    },
+    {
+        "id": "10_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub20.mp4",
+        "question": "How many picture is being shown next to the man?",
+        "answer": "\nAnswer: In the video, the man is shown in three pictures next to the man.",
+        "time": 8.83024001121521
+    },
+    {
+        "id": "1_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub7.mp4",
+        "question": "How is the meat prepared?",
+        "answer": "\nAnswer: In the video, the meat is prepared by",
+        "time": 5.681303262710571
+    },
+    {
+        "id": "2_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub7.mp4",
+        "question": "How is the onion prepared?",
+        "answer": "\nAnswer: In the video, the onion is sliced",
+        "time": 5.68322491645813
+    },
+    {
+        "id": "3_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub10.mp4",
+        "question": "What did he pour into the flour?",
+        "answer": "\nAnswer: In the video, the person is pouring a white powder into a glass bowl.",
+        "time": 5.662709951400757
+    },
+    {
+        "id": "4_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub9.mp4",
+        "question": "What did he do to the meat mixture?",
+        "answer": "\nAnswer: In the video, the person is seen mixing the meat mixture",
+        "time": 5.783358097076416
+    },
+    {
+        "id": "5_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub2.mp4",
+        "question": "What are they doing in the video?",
+        "answer": "\nAnswer: In the video, the workers are preparing food",
+        "time": 6.987490653991699
+    },
+    {
+        "id": "6_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub5.mp4",
+        "question": "Describe the scene.",
+        "answer": "\nAnswer: In the video, there is a group of people gathered around tables in a restaurant.",
+        "time": 7.700302362442017
+    },
+    {
+        "id": "7_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub8.mp4",
+        "question": "How the old man's feeling?",
+        "answer": "\nAnswer: In the video, the old man is shown smiling and talking to the camera.",
+        "time": 6.4525229930877686
+    },
+    {
+        "id": "8_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub10.mp4",
+        "question": "Is the kid with redshirt bitting something?",
+        "answer": "\nAnswer: In the video, the kid with a red shirt is not biting anything",
+        "time": 6.108899116516113
+    },
+    {
+        "id": "9_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub36.mp4",
+        "question": "Is there any fisherman in the picture ?",
+        "answer": "\nAnswer: In the video, there is a fisherman",
+        "time": 14.05017900466919
+    },
+    {
+        "id": "10_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub20.mp4",
+        "question": "Describe 3 images next to the man.",
+        "answer": "\nAnswer: In the video, the man is shown in three different images.",
+        "time": 9.296504735946655
+    },
+    {
+        "id": "1_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub8.mp4",
+        "question": "Describe the outfit of a person who is being interviewed.",
+        "answer": "\nAnswer: In the video, the person being interviewed is wearing a white shirt and a black hat",
+        "time": 5.936529159545898
+    },
+    {
+        "id": "2_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub5.mp4",
+        "question": "Describe the outfit of a person who is being interviewed.",
+        "answer": "\nAnswer: In the video, the person being interviewed is wearing a blue shirt",
+        "time": 5.885735034942627
+    },
+    {
+        "id": "3_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub11.mp4",
+        "question": "What is the gender of the person who is being interviewed.",
+        "answer": "\nAnswer: In the video, the person being interviewed is a man",
+        "time": 6.238063097000122
+    },
+    {
+        "id": "4_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub10.mp4",
+        "question": "Describe the outfit of a person who is on the wheelchair.",
+        "answer": "\nAnswer: In the video, the person on the wheelchair is wearing a yellow shirt",
+        "time": 6.917510986328125
+    },
+    {
+        "id": "5_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "What is the man teaching?",
+        "answer": "\nAnswer: In the video, the man is teaching Vietnamese",
+        "time": 13.111941576004028
+    },
+    {
+        "id": "6_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "what region is the teacher teaching?",
+        "answer": "\nAnswer: In the video, the teacher is teaching in",
+        "time": 11.796278953552246
+    },
+    {
+        "id": "7_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub8.mp4",
+        "question": "Which country is being shown on the map in the image?",
+        "answer": "\nAnswer: In the video, the country being shown on the map is",
+        "time": 16.75475573539734
+    },
+    {
+        "id": "8_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub24.mp4",
+        "question": "Is there an image of the animal that make milk?",
+        "answer": "\nAnswer: In the video, there is an image of a cow",
+        "time": 12.128248691558838
+    },
+    {
+        "id": "9_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub36.mp4",
+        "question": "What kind of demographic is being shown?",
+        "answer": "\nAnswer: In the video, the demographic being shown is Vietnamese",
+        "time": 16.08621597290039
+    },
+    {
+        "id": "10_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub24.mp4",
+        "question": "What kind of demographic is being shown?",
+        "answer": "\nAnswer: In the video, the demographic being shown is Vietnamese",
+        "time": 9.249444007873535
+    },
+    {
+        "id": "1_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub2.mp4",
+        "question": "What is the name of the dish?",
+        "answer": "\nAnswer: In the video, the dish is called Banh R\u00e1n Burger Bo",
+        "time": 5.994836091995239
+    },
+    {
+        "id": "2_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub2.mp4",
+        "question": "What are the ingredients to make the dish?",
+        "answer": "\nAnswer: In the video, the ingredients to make the dish are",
+        "time": 5.547064542770386
+    },
+    {
+        "id": "3_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "How many province mentioned in the video?",
+        "answer": "\nAnswer: In the video, the province mentioned is",
+        "time": 7.343050956726074
+    },
+    {
+        "id": "4_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "What is the area of the North Central region?",
+        "answer": "\nAnswer: In the video, the North Central region is shown in the second row",
+        "time": 11.214933633804321
+    },
+    {
+        "id": "5_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "What is the population of that region?",
+        "answer": "\nAnswer: In the video, the population of that region is 10,990",
+        "time": 8.289302587509155
+    }
+]
