@@ -1,0 +1,247 @@
+[
+    {
+        "id": "1_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub6.mp4",
+        "question": "How many times did the tomato get cut?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many times did the tomato get cut?\nAssistant: The tomato was cut twice.",
+        "time": 1.7720770835876465
+    },
+    {
+        "id": "2_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub6.mp4",
+        "question": "How many times did the onion get cut",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many times did the onion get cut\nAssistant: The onion got cut twice.",
+        "time": 0.625295877456665
+    },
+    {
+        "id": "3_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub10.mp4",
+        "question": "How many times did he stir the liquid dough?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many times did he stir the liquid dough?\nAssistant: He stirred the liquid dough three times.",
+        "time": 0.6880011558532715
+    },
+    {
+        "id": "4_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub9.mp4",
+        "question": "How many times did he stir the mixture?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many times did he stir the mixture?\nAssistant: He stirred the mixture three times.",
+        "time": 0.6120004653930664
+    },
+    {
+        "id": "5_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub13.mp4",
+        "question": "How many meat patties are there in total?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many meat patties are there in total?\nAssistant: There are three meat patties in total.",
+        "time": 0.6629996299743652
+    },
+    {
+        "id": "6_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub13.mp4",
+        "question": "How many times did he fold the meat patties",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many times did he fold the meat patties\nAssistant: The video does not specify the number of times the meat patties were folded.",
+        "time": 0.8861424922943115
+    },
+    {
+        "id": "7_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub2.mp4",
+        "question": "How many bow of food at the start of video?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many bow of food at the start of video?\nAssistant: Two bow of food.",
+        "time": 0.5199997425079346
+    },
+    {
+        "id": "8_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "How many section in the picture next to the man?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many section in the picture next to the man?\nAssistant: There are two sections in the picture next to the man.",
+        "time": 1.276181697845459
+    },
+    {
+        "id": "9_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub8.mp4",
+        "question": "How many box is pointed out from the map?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many box is pointed out from the map?\nAssistant: Two boxes are pointed out from the map.",
+        "time": 0.8470003604888916
+    },
+    {
+        "id": "10_count",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub20.mp4",
+        "question": "How many picture is being shown next to the man?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many picture is being shown next to the man?\nAssistant: There are three pictures being shown next to the man.",
+        "time": 1.2027971744537354
+    },
+    {
+        "id": "1_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub7.mp4",
+        "question": "How is the meat prepared?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow is the meat prepared?\nAssistant: The meat is cut into small pieces and mixed with the chopped onions and garlic.",
+        "time": 0.8719987869262695
+    },
+    {
+        "id": "2_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub7.mp4",
+        "question": "How is the onion prepared?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow is the onion prepared?\nAssistant: The onion is sliced into thin strips and placed on a wooden cutting board.",
+        "time": 0.8530001640319824
+    },
+    {
+        "id": "3_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub10.mp4",
+        "question": "What did he pour into the flour?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat did he pour into the flour?\nAssistant: He poured a white powdery substance into the flour.",
+        "time": 0.6760003566741943
+    },
+    {
+        "id": "4_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub9.mp4",
+        "question": "What did he do to the meat mixture?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat did he do to the meat mixture?\nAssistant: He added a large amount of flour to the meat mixture.",
+        "time": 0.7409999370574951
+    },
+    {
+        "id": "5_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub2.mp4",
+        "question": "What are they doing in the video?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat are they doing in the video?\nAssistant: They are preparing and serving a variety of dishes, including a large metal bowl filled with green vegetables and a large metal bowl filled with seafood.",
+        "time": 1.2739977836608887
+    },
+    {
+        "id": "6_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub5.mp4",
+        "question": "Describe the scene.",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nDescribe the scene.\nAssistant: The video captures a bustling outdoor market scene, bustling with activity and people. The market is filled with various stalls, each selling different items, including food. The environment is lively, with people walking around and interacting with the vendors. The market is well-lit, with a clear sky visible in the background. The vendors",
+        "time": 2.5085108280181885
+    },
+    {
+        "id": "7_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub8.mp4",
+        "question": "How the old man's feeling?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow the old man's feeling?\nAssistant: The old man's feeling is described as sad.",
+        "time": 0.7249996662139893
+    },
+    {
+        "id": "8_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub10.mp4",
+        "question": "Is the kid with redshirt bitting something?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nIs the kid with redshirt bitting something?\nAssistant: The video does not specify the type of food or drink the kid is biting.",
+        "time": 1.3595921993255615
+    },
+    {
+        "id": "9_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub36.mp4",
+        "question": "Is there any fisherman in the picture ?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nIs there any fisherman in the picture ?\nAssistant: No, there is no fisherman in the picture.",
+        "time": 0.8989999294281006
+    },
+    {
+        "id": "10_des",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub20.mp4",
+        "question": "Describe 3 images next to the man.",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nDescribe 3 images next to the man.\nAssistant: The first image shows a man in a blue shirt standing in front of a screen displaying a list of Vietnamese words. The words are arranged in a vertical column, with each word on its own line. The man is holding a pen and appears to be explaining or demonstrating something. The background is a plain white wall, and",
+        "time": 2.5114822387695312
+    },
+    {
+        "id": "1_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub8.mp4",
+        "question": "Describe the outfit of a person who is being interviewed.",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nDescribe the outfit of a person who is being interviewed.\nAssistant: The person is wearing a white shirt with a black collar and a dark hat.",
+        "time": 1.2461211681365967
+    },
+    {
+        "id": "2_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub5.mp4",
+        "question": "Describe the outfit of a person who is being interviewed.",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nDescribe the outfit of a person who is being interviewed.\nAssistant: The person is wearing a red shirt with a white logo on the left side of the chest.",
+        "time": 0.9920001029968262
+    },
+    {
+        "id": "3_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub11.mp4",
+        "question": "What is the gender of the person who is being interviewed.",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat is the gender of the person who is being interviewed.\nAssistant: The person being interviewed is a man.",
+        "time": 0.7401823997497559
+    },
+    {
+        "id": "4_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L30_V084_sub10.mp4",
+        "question": "Describe the outfit of a person who is on the wheelchair.",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nDescribe the outfit of a person who is on the wheelchair.\nAssistant: The person on the wheelchair is wearing a yellow and black outfit.",
+        "time": 0.777435302734375
+    },
+    {
+        "id": "5_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "What is the man teaching?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat is the man teaching?\nAssistant: The man is teaching about the Vietnamese language and culture.",
+        "time": 1.0355150699615479
+    },
+    {
+        "id": "6_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "what region is the teacher teaching?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nwhat region is the teacher teaching?\nAssistant: The teacher is teaching in the region of Vietnam.",
+        "time": 0.9870004653930664
+    },
+    {
+        "id": "7_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub8.mp4",
+        "question": "Which country is being shown on the map in the image?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhich country is being shown on the map in the image?\nAssistant: The map shows the country of Vietnam.",
+        "time": 0.6540000438690186
+    },
+    {
+        "id": "8_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub24.mp4",
+        "question": "Is there an image of the animal that make milk?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nIs there an image of the animal that make milk?\nAssistant: Yes.",
+        "time": 0.8691344261169434
+    },
+    {
+        "id": "9_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub36.mp4",
+        "question": "What kind of demographic is being shown?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat kind of demographic is being shown?\nAssistant: The demographic being shown is the population of Vietnam.",
+        "time": 0.8188560009002686
+    },
+    {
+        "id": "10_hypo",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub24.mp4",
+        "question": "What kind of demographic is being shown?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat kind of demographic is being shown?\nAssistant: The demographic being shown is the population of the area, specifically the population of the city of Hanoi.",
+        "time": 1.4930901527404785
+    },
+    {
+        "id": "1_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub2.mp4",
+        "question": "What is the name of the dish?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat is the name of the dish?\nAssistant: The name of the dish is \"B\u00e1nh R\u00e1n BURGER B\u00d4\".",
+        "time": 0.9950258731842041
+    },
+    {
+        "id": "2_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L26_V032_sub2.mp4",
+        "question": "What are the ingredients to make the dish?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat are the ingredients to make the dish?\nAssistant: The ingredients to make the dish are 200g of bonh\u00e0n (chicken), 30g of x\u00e1c (onion), 11g of t\u00e1m (garlic), 11g of n\u00e1m (onion), 11g of n\u00e9",
+        "time": 2.211015462875366
+    },
+    {
+        "id": "3_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "How many province mentioned in the video?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nHow many province mentioned in the video?\nAssistant: Three provinces mentioned in the video are Thi\u1ec1n, Ngh\u1ec7, and Th\u00e1i.",
+        "time": 1.2496891021728516
+    },
+    {
+        "id": "4_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "What is the area of the North Central region?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat is the area of the North Central region?\nAssistant: The area of the North Central region is 510 km\u00b2.",
+        "time": 0.9371535778045654
+    },
+    {
+        "id": "5_ocr",
+        "video_path": "Z:\\ACMMM\\data\\bench\\L25_V016_sub7.mp4",
+        "question": "What is the population of that region?",
+        "answer": "User: You are provided the following series of fifteen frames from a 0:00:15 [H:MM:SS] video.\n\nFrame from 00:00:\nFrame from 00:01:\nFrame from 00:02:\nFrame from 00:03:\nFrame from 00:04:\nFrame from 00:05:\nFrame from 00:06:\nFrame from 00:07:\nFrame from 00:08:\nFrame from 00:09:\nFrame from 00:10:\nFrame from 00:11:\nFrame from 00:12:\nFrame from 00:13:\nFrame from 00:14:\n\nWhat is the population of that region?\nAssistant: The population of that region is 10,637,000.",
+        "time": 1.0512840747833252
+    }
+]

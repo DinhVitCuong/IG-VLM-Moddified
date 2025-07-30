@@ -51,4 +51,8 @@ INTERACTIVE:
 python run_llava_onevision_qwen2_05b.py --video_path /path/to/video.mp4 --path_result /path/to/output --llm_size 7b
 
 BENCH:
-python Z:\ACMMM\IG-VLM-Moddified\run_llava_onevision_qwen2_05b_new.py --bench_json Z:\ACMMM\IG-VLM-Moddified\evaluation\bench.json --path_result Z:\ACMMM\IG-VLM-Moddified\results\bench 
+python Z:\ACMMM\IG-VLM-Moddified\run_llava_onevision_qwen2_05b_new.py --bench_json Z:\ACMMM\IG-VLM-Moddified\evaluation\bench.json --path_result Z:\ACMMM\IG-VLM-Moddified\results\bench --frame_number 15
+
+python Z:\ACMMM\IG-VLM-Moddified\run_SmolVLM2-500M-Video-Instruct.py --bench_json Z:\ACMMM\IG-VLM-Moddified\evaluation\bench.json --path_result Z:\ACMMM\IG-VLM-Moddified\results\bench
+
+python Z:\ACMMM\IG-VLM-Moddified\run_InternVL_1B_pretrained.py --bench_json Z:\ACMMM\IG-VLM-Moddified\evaluation\bench.json --path_result Z:\ACMMM\IG-VLM-Moddified\results\bench
